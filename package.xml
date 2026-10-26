@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
+
+    <!-- For information about the contents of this file see
+    https://freecad.github.io/Addon-Academy/Topics/Structuring/Manifest/ -->
+
+    <!--[ Info ]-->
+
+    <name>ForgeKit</name>
+    <description>ForgeKit manages various tools for FrameForge, Plume, and other</description>
+    <version>0.1.0</version>
+    <date>2026-10-26</date>
+
+    <!--[ Ecosystem Requirements ]-->
+
+    <!--NOTE: Examples only, this Template does *not* actually require these versions -->
+    <freecadmin>1.1.1</freecadmin>
+    <pythonmin>3.10</pythonmin>
+
+    <!--[ Dependencies ]-->
+
+    <!--NOTE: Examples only, this Template does *not* actually require these -->
+    <!--
+    <depend type="python">numpy</depend>
+    <depend type="addon">Curves</depend>
+    <depend type="internal">draft</depend>
+    -->
+
+    <!--[ Tags ]-->
+    <!--
+    <tag>Template</tag>
+    <tag>Minimal</tag>
+    <tag>Example</tag>
+    -->
+
+    <!--[ Maintainers ]-->
+
+    <maintainer email="vivien.henry@inductivebrain.fr">Vivien HENRY</maintainer>
+
+    <!--[ Authors ]-->
+
+    <author>Vivien HENRY</author>
+    <!-- <author>Yet another author's name here</author> -->
+
+    <!--[ Licenses ]-->
+
+    <license file="LICENSE-Code">LGPL-2.1-or-later</license>
+    <license file="LICENSE-Assets">CC-BY-SA-4.0</license>
+
+    <!--[ Icon ]-->
+
+    <icon>freecad/ForgeKit/resources/icons/ForgeKit.svg</icon>
+
+    <!--[ Urls ]-->
+
+    <url type="repository" branch="main">https://github.com/lukh/forgekit</url>
+    <url type="documentation">https://github.com/lukh/forgekit/tree/main/freecad/ForgeKit/resources/docs/</url>
+    <url type="bugtracker">https://github.com/lukh/forgekit/issues/</url>
+    <url type="readme">https://github.com/lukh/forgekit/refs/heads/main/freecad/ForgeKit/resources/docs/Overview.md</url>
+
+    <!--[ Content ]-->
+
+    <content>
+        <other/>
+
+        <!-- Example stuff -->
+        <workbench>
+            <name>ForgeKit</name>
+            <classname>ForgeKitWorkbench</classname>
+            <description>Example workbench</description>
+            <subdirectory>./</subdirectory>
+            <icon>freecad/ForgeKit/resources/icons/ForgeKit-wb.svg</icon>
+        </workbench>
+
+    </content>
+
+</package>
