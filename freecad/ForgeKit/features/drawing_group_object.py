@@ -1,5 +1,6 @@
 
 import datetime
+import FreeCAD as App
 
 class DrawingGroup:
     def __init__(self, obj: App.DocumentObject, title: str = "", src_item: App.DocumentObject=None) -> None:

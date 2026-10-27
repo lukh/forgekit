@@ -48,7 +48,7 @@ class CreateDrawingGroupCommand:
                 name += "_" + src_item.Label
 
             # TODO should be a task ?
-            (text, status) = QtGui.QInputDialog.getText(None, 'Title', 'Title for the Group Pages.')
+            (title, status) = QtGui.QInputDialog.getText(None, 'Title', 'Title for the Group Pages.')
 
             if status:
                 DrawingGroup.create(name, doc, title=title, src_item=src_item)

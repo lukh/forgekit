@@ -12,7 +12,7 @@ from ..resources import Resources
 import FreeCADGui as Gui
 
 
-class DrawingGroup:
+class DrawingGroupViewProvider:
     """
     Basic ViewProvider with custom Icon.
     """
