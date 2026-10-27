@@ -56,5 +56,6 @@ from .create_td_from_spreadsheet_command import CreateTDPageFromSpreadsheetComma
 from .export_all_drawings_command import ExportTechDrawCommand as ExportTechDrawCommand
 
 from .generate_variant_links_command import GenerateVariantLinksCommand as GenerateVariantLinksCommand
+from .create_optional_variant_command import CreateOptionalVariantCommand as CreateOptionalVariantCommand
 
 from .rename_assembly_joints_command import RenameAssemblyJointsCommand as RenameAssemblyJointsCommand

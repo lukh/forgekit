@@ -15,7 +15,7 @@ Keep this file fast - it runs on every FreeCAD GUI startup.
 """
 
 from .resources import Resources
-from .commands import CreateDrawingGroupCommand, CreateTDPageFromSpreadsheetCommand, ExportTechDrawCommand, GenerateVariantLinksCommand, RenameAssemblyJointsCommand
+from .commands import CreateDrawingGroupCommand, CreateTDPageFromSpreadsheetCommand, ExportTechDrawCommand, GenerateVariantLinksCommand, CreateOptionalVariantCommand, RenameAssemblyJointsCommand
 
 # from .commands import WorkbenchManipulator
 
@@ -33,6 +33,7 @@ CreateTDPageFromSpreadsheetCommand.Install()
 ExportTechDrawCommand.Install()
 
 GenerateVariantLinksCommand.Install()
+CreateOptionalVariantCommand.Install()
 
 RenameAssemblyJointsCommand.Install()
 

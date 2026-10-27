@@ -8,7 +8,7 @@ import FreeCADGui as Gui
 translate = App.Qt.translate
 
 from .resources import Resources
-from .commands import CreateDrawingGroupCommand, CreateTDPageFromSpreadsheetCommand, ExportTechDrawCommand, GenerateVariantLinksCommand, RenameAssemblyJointsCommand
+from .commands import CreateDrawingGroupCommand, CreateTDPageFromSpreadsheetCommand, ExportTechDrawCommand, GenerateVariantLinksCommand, CreateOptionalVariantCommand, RenameAssemblyJointsCommand
 
 
 
@@ -30,7 +30,7 @@ class ForgeKitWorkbench(Gui.Workbench):
     def Initialize(self) -> None:
         App.Console.PrintMessage("Example Workbench initialized\n")
         # Adding menus and toolbars when the Workbench is active (example)
-        commands = [CreateDrawingGroupCommand.Name, CreateTDPageFromSpreadsheetCommand.Name, ExportTechDrawCommand.Name, GenerateVariantLinksCommand.Name, RenameAssemblyJointsCommand.Name]
+        commands = [CreateDrawingGroupCommand.Name, CreateTDPageFromSpreadsheetCommand.Name, ExportTechDrawCommand.Name, GenerateVariantLinksCommand.Name, CreateOptionalVariantCommand.Name, RenameAssemblyJointsCommand.Name]
         
         self.appendToolbar("ForgeKit", commands)
         self.appendMenu("ForgeKit", commands)
