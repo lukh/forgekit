@@ -43,8 +43,6 @@ class GenerateVariantLinksCommand:
 
             obj = sel[0]
 
-            App.Console.PrintMessage('Object Name: ' + obj.Label)
-
             (text, status) = QtGui.QInputDialog.getText(None, 'Properties', 'List the properties that will be scanned, separated by a comma')
 
             if status:
