@@ -35,17 +35,25 @@ class CreateTDPageFromSpreadsheetCommand:
 
     def Activated(self) -> None:
         if App.GuiUp:
+            doc = App.ActiveDocument
+
             sel = App.Gui.Selection.getSelection()
-            spreadsheets = [o.TypeId == "Spreadsheet::Sheet" for o in sel]
-            pages = [o.TypeId == "TechDraw::DrawPage" for o in sel]
+            spreadsheets = [o for o in sel if o.TypeId == "Spreadsheet::Sheet"]
+            pages = [o for o in sel if o.TypeId == "TechDraw::DrawPage"]
 
             if len(pages) == 0:
                 page = doc.addObject("TechDraw::DrawPage", "Page")
                 page.KeepUpdated = True
+
                 template = doc.addObject("TechDraw::DrawSVGTemplate", "Template")
+
+                params = App.ParamGet("User parameter:BaseApp/Preferences/Mod/TechDraw/Files")
+                default_template_path = params.GetString("TemplateFile", "")
+                template.Template = default_template_path
+
                 page.Template = template
 
-                pages = [pages]
+                pages = [page]
 
             for p in pages:
                 for s in spreadsheets:
