@@ -4,4 +4,4 @@
 Custom DocumentObject types (aka FeaturePythonObjects)
 """
 
-from .example_feature_object import MyCoolCube as MyCoolCube
+from .drawing_group_object import DrawingGroup as DrawingGroup

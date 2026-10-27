@@ -15,7 +15,10 @@ Keep this file fast - it runs on every FreeCAD GUI startup.
 """
 
 from .resources import Resources
-from .commands import ExampleCommand, WorkbenchManipulator
+from .commands import CreateDrawingGroupCommand, GenerateVariantLinksCommand, RenameAssemblyJointsCommand, CreateTDPageFromSpreadsheetCommand
+
+from .commands import WorkbenchManipulator
+
 from .example_workbench import ForgeKitWorkbench
 
 # Install icons (optional)
@@ -25,7 +28,12 @@ Resources.gui_register_icons()
 Resources.gui_register_translations()
 
 # Install commands
-ExampleCommand.Install()
+CreateDrawingGroupCommand.Install()
+CreateTDPageFromSpreadsheetCommand.Install()
+
+GenerateVariantLinksCommand.Install()
+
+RenameAssemblyJointsCommand.Install()
 
 # Add Commands to the Gui
 WorkbenchManipulator.install()
