@@ -7,6 +7,8 @@ Optional Variant Object. Allows to add, or not, a Link to a StdPart (or Assembly
 from __future__ import annotations
 
 import FreeCAD as App
+import Part
+
 
 class OptionalVariant:
     """

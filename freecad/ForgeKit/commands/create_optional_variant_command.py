@@ -41,7 +41,9 @@ class CreateOptionalVariantCommand:
                 OptionalVariant.create(src_obj)
 
     def IsActive(self) -> bool:
-        return bool(App.ActiveDocument) and bool(Gui.Selection.getSelection())
+        if App.GuiUp:
+            return len(App.Gui.Selection.getSelection()) > 0
+        return False
 
     @classmethod
     def Install(cls) -> None:
