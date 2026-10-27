@@ -28,8 +28,6 @@ class ForgeKitWorkbench(Gui.Workbench):
 
 
     def Initialize(self) -> None:
-        App.Console.PrintMessage("Example Workbench initialized\n")
-        # Adding menus and toolbars when the Workbench is active (example)
         commands = [CreateDrawingGroupCommand.Name, CreateTDPageFromSpreadsheetCommand.Name, ExportTechDrawCommand.Name, GenerateVariantLinksCommand.Name, CreateOptionalVariantCommand.Name, RenameAssemblyJointsCommand.Name]
         
         self.appendToolbar("ForgeKit", commands)
