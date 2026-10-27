@@ -23,7 +23,7 @@ class CreateDrawingGroupCommand:
     def GetResources(self) -> dict[str, str]:
         return {
             "Pixmap": Resources.icon(
-                "ForgeKit.svg"
+                "forgekit_drawinggroup.svg"
             ),
             "MenuText": translate(
                 "ForgeKit",

@@ -21,7 +21,7 @@ class CreateTDPageFromSpreadsheetCommand:
     def GetResources(self) -> dict[str, str]:
         return {
             "Pixmap": Resources.icon(
-                "ForgeKit.svg"
+                "forgekit_create_td_from_spreadsheet.svg"
             ),
             "MenuText": translate(
                 "ForgeKit",

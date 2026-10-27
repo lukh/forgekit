@@ -21,15 +21,15 @@ class RenameAssemblyJointsCommand:
     def GetResources(self) -> dict[str, str]:
         return {
             "Pixmap": Resources.icon(
-                "ForgeKit.svg"
+                "forgekit_rename_assembly_joints.svg"
             ),
             "MenuText": translate(
                 "ForgeKit",
-                "Example Command",
+                "Rename assembly joints",
             ),
             "ToolTip": translate(
                 "ForgeKit",
-                "Runs the example command",
+                "Rename Assembly Joint, including reference labels",
             ),
         }
 

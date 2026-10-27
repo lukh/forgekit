@@ -49,5 +49,12 @@ Good practices:
     - Export command classes here it to make it explicit public
 """
 
-from .example_command import ExampleCommand as ExampleCommand
-from .example_manipulator import WorkbenchManipulator as WorkbenchManipulator
+# from .example_manipulator import WorkbenchManipulator as WorkbenchManipulator
+
+from .drawing_group_command import CreateDrawingGroupCommand as CreateDrawingGroupCommand
+from .create_td_from_spreadsheet_command import CreateTDPageFromSpreadsheetCommand as CreateTDPageFromSpreadsheetCommand
+from .export_all_drawings_command import ExportTechDrawCommand as ExportTechDrawCommand
+
+from .generate_variant_links_command import GenerateVariantLinksCommand as GenerateVariantLinksCommand
+
+from .rename_assembly_joints_command import RenameAssemblyJointsCommand as RenameAssemblyJointsCommand

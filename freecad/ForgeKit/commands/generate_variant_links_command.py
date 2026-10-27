@@ -23,14 +23,9 @@ class GenerateVariantLinksCommand:
         pass
 
     def GetResources(self) -> dict[str, str]:
-        # Returns a dictionary that defines how the command appears in the UI.
-        # - Pixmap: path to the icon file (relative to FreeCAD's icon search paths or absolute path)
-        # - MenuText: text shown in menus (use translate for translation support)
-        # - ToolTip: text shown when hovering over the button/menu item
-        # - Accel: optional keyboard shortcut (e.g., "Ctrl+A")
         return {
             "Pixmap": Resources.icon(
-                "ForgeKit.svg"
+                "forgekit_generate_variantlinks.svg"
             ),
             "MenuText": translate(
                 "ForgeKit",
