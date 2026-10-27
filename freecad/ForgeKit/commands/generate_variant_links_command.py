@@ -25,7 +25,7 @@ class GenerateVariantLinksCommand:
     def GetResources(self) -> dict[str, str]:
         return {
             "Pixmap": Resources.icon(
-                "forgekit_generate_variantlinks.svg"
+                "forgekit_variantlinks.svg"
             ),
             "MenuText": translate(
                 "ForgeKit",
@@ -57,10 +57,16 @@ class GenerateVariantLinksCommand:
                     
                 configs = list(itertools.product(*comb))
 
+                group = App.ActiveDocument.addObject("App::DocumentObjectGroup", obj.Name + "_Variants")
+                group.Label = obj.Name + "_Variants"
+
+
                 for idx, c in enumerate(configs):
                     label = obj.Label + '_' + '_'.join(c)
                     
                     l = App.ActiveDocument.addObject('App::Link', label)
+                    group.addObject(l)
+                    
                     l.LinkedObject = obj
                     l.LinkCopyOnChange = "Enabled"
                     l.Placement.Base.x += 20*idx
